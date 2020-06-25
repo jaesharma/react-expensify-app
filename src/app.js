@@ -8,6 +8,7 @@ import {editExpense} from './actions/expenses';
 import {setTextFilter} from './actions/filters';
 import getVisibleExpenses from './selectors/expenses';
 import AppRouter from './router/AppRouter.js';
+import {startSetExpenses} from './actions/expenses';
 import './styles/styles.scss';
 import 'normalize.css/normalize.css';
 import './firebase/firebase';
@@ -19,4 +20,8 @@ const jsx=(
 		<AppRouter/>
 	</Provider>
 );
-ReactDOM.render(jsx,document.getElementById('app'));
+
+ReactDOM.render(<p>loading...</p>,document.getElementById('app'));
+store.dispatch(startSetExpenses()).then(()=>{
+	ReactDOM.render(jsx,document.getElementById('app'));
+});
