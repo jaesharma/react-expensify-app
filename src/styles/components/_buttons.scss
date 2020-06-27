@@ -27,13 +27,19 @@ button{
 	background: none;
 	font-size: $l-size;
 	padding: $s-size $m-size;
+	@media(max-width: $desktop-breakpoint){
+		font-size: $m-size;
+	}
 }
 
 .long-btn{
-	width: 90%;
+	width: 88%;
 	font-size: $l-size;
 	padding: $m-size;
-	margin-left: $l-size;
+	margin: 0 $m-size $xl-size 5.6rem;
+	@media(max-width: $desktop-breakpoint){
+		margin: 0 $s-size;
+	}
 }
 
 .long-btn:hover{
@@ -46,6 +52,10 @@ button{
 	margin-left: 4.4rem;
 	background-color: $red;
 	margin-bottom: $xl-size;
+	@media(max-width: $desktop-breakpoint){
+		margin: 0 $m-size 0 0;
+		width: 93%;
+	}
 }
 
 .rm-btn:hover{

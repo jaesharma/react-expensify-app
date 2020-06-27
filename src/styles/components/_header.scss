@@ -14,4 +14,7 @@
 	font-weight: $s-size;
 	color: white;
 	padding: $m-size;
+	@media(max-width: $desktop-breakpoint){
+		font-size: $l-size;
+	}
 }
