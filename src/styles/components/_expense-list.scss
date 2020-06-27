@@ -1,0 +1,62 @@
+.expense-list{
+	margin: $l-size;
+}
+
+.expense-list__header{
+	display: flex;
+	justify-content: space-between;
+	background: $off-white;
+	font-size:$m-size;
+	font-weight: bold;
+	border: 1px solid darken($off-white,7%);
+	padding: $m-size;
+	border-radius: 3px;
+	@media(max-width: $desktop-breakpoint){
+		display: none;
+	}
+}
+
+.mobile-header{
+	background: $off-white;
+	border: 1px solid darken($off-white,7%);
+	font-size: 2.6rem;
+	@media(min-width: $desktop-breakpoint){
+		display: none;
+	}
+}
+
+.expense-list__title{
+	margin: $s-size;
+}
+
+.expense-item{
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid darken($off-white,7%);
+	padding: $m-size;
+	margin:0;
+	transition: background .3s ease;
+	&:hover{
+		background: $off-white;
+	}
+	@media(max-width: $desktop-breakpoint){
+		flex-direction: column;
+		.expense-item__amount{
+			margin: 0;
+		}
+	}
+}
+
+.expense-item__title{
+	word-break: break-all;
+	padding-right: $m-size;
+}
+
+.expense-item__amount{
+	margin: 0 $s-size 0 $xl-size;
+}
+
+.expense-list__msg{
+	display: flex;
+	justify-content: center;
+}

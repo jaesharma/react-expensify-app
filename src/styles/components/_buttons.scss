@@ -1,0 +1,54 @@
+button{
+	background: $light-blue;
+	text-decoration: none;
+	line-height: 1;
+	color: white;
+	outline: none;
+	border: none;
+	display: inline-block;
+}
+
+.login-button{
+	font-size: $l-size;
+	padding: $s-size $l-size;
+	background: #197969;
+	outline: none;
+	border: none;
+	color: white;
+}
+
+.login-button:hover{
+	transition: .5s ease-in-out;
+	background: $light-blue;
+	color: white;
+}
+
+.link-button{
+	background: none;
+	font-size: $l-size;
+	padding: $s-size $m-size;
+}
+
+.long-btn{
+	width: 90%;
+	font-size: $l-size;
+	padding: $m-size;
+	margin-left: $l-size;
+}
+
+.long-btn:hover{
+	background: darken($light_blue,15);
+	transition: .5s ease-in-out;
+}
+
+.rm-btn{
+	width: 88.5%;
+	margin-left: 4.4rem;
+	background-color: $red;
+	margin-bottom: $xl-size;
+}
+
+.rm-btn:hover{
+	transition: .5s ease-in-out;
+	background: darken($red,10);
+}

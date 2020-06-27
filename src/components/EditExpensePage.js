@@ -12,7 +12,7 @@ const EditExpensePage=(props)=>(
 				props.history.push('/dashboard');
 			}}
 		/>
-		<button onClick={()=>{
+		<button className="long-btn rm-btn" onClick={()=>{
 			props.dispatch(startRemoveExpense({id: props.match.params.id}));
 			props.history.push('/dashboard');
 		}}>remove</button>

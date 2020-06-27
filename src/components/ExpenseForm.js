@@ -56,36 +56,56 @@ export default class ExpenseForm extends React.Component{
 	render(){
 		return(
 			<div>
-			  {this.state.error && <p>{this.state.error}</p>}
-			  <form onSubmit={this.onFormSubmit}>
-				<input
-				 type='text'
-				 placeholder='Description'
-				 autoFocus
-				 value={this.state.description}
-				 onChange={this.onDescriptionChange}
-				/>
-				<input
-				 type='text'
-				 placeholder='Amount'
-				 value={this.state.amount}
-				 onChange={this.onAmountChange}
-				/>
-				<textarea
-				  placeholder='add a short note'
-				  value={this.state.note}
-				  onChange={this.onNoteChange}
-				/>
-				<SingleDatePicker
-				  date={this.state.createdAt}
-				  onDateChange={this.onDateChange}
-				  focused={this.state.calendarFocused}
-				  onFocusChange={this.onFocusChange}
-				  numberOfMonths={1}
-				  isOutsideRange={()=>false}
-				/>
-				<button type='submit'>Add Expense</button>
-			  </form>
+			  <div className="page-header__container">
+			  	<h1>Add Expense</h1>
+			  </div>
+			  <div>
+			  <div className="form_error">
+			  	{this.state.error && <p>{this.state.error}</p>}
+			  </div>
+			  	<div className="container">
+					  <form className="form" onSubmit={this.onFormSubmit}>
+					  	  <div className="input-item">
+							<input
+							 className="text-input"
+							 type='text'
+							 placeholder='Description'
+							 autoFocus
+							 value={this.state.description}
+							 onChange={this.onDescriptionChange}
+							/>
+						  </div>
+						  <div className="input-item">
+							<input
+							 className="text-input"
+							 type='text'
+							 placeholder='Amount'
+							 value={this.state.amount}
+							 onChange={this.onAmountChange}
+							/>
+						  </div>
+						  <div className="input-item">
+							<textarea
+							  className="text-input"
+							  placeholder='add a short note'
+							  value={this.state.note}
+							  onChange={this.onNoteChange}
+							/>
+						  </div>
+						  <div className="input-item">
+							<SingleDatePicker
+							  date={this.state.createdAt}
+							  onDateChange={this.onDateChange}
+							  focused={this.state.calendarFocused}
+							  onFocusChange={this.onFocusChange}
+							  numberOfMonths={1}
+							  isOutsideRange={()=>false}
+							/>
+						  </div>
+							<button className="long-btn" type='submit'>Add Expense</button>
+					 	</form>
+				  </div>
+			  </div>
 			</div>
 		);
 	}

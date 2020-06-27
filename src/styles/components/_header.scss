@@ -1,0 +1,17 @@
+.header{
+	background: $dark-blue;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	padding: $s-size;
+	height: 8rem;
+	align-items: center;
+	margin: 0;
+}
+
+.header h1{
+	font-size: $xl-size;
+	font-weight: $s-size;
+	color: white;
+	padding: $m-size;
+}

@@ -1,10 +1,16 @@
+*{
+	box-sizing: content-box;
+}
+
 html{
 	font-size:62.5%;
 }
 
 body{
+	color: #333;
 	font-family: Helvetica,Arial,sans-serif;
 	font-size:1.6rem;
+	line-height: 1.6;
 }
 
 button{
@@ -16,6 +22,34 @@ button:disabled{
 	cursor:default;
 }
 
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: $s-size;
+}
+
+.Link{
+	font-size: $m-size;
+	font-weight: 400;
+	text-decoration: none;
+	background: none;
+}
+
 .is-active{
 	font-weight:bold;
+}
+
+.form_error{
+	color: $red;
+	font-size: $m-size;
+	margin-left: 8rem;
+}
+
+.loader{
+	background: url('/images/loader.gif');
+	height: 100%; 
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

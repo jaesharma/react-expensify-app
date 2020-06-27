@@ -1,0 +1,44 @@
+.input-group{
+	display: flex;
+	padding: $s-size;
+	margin-bottom: $m-size;
+	flex-direction: row;
+	@media(max-width: $desktop-breakpoint){
+		flex-direction: column;
+		margin-bottom: $l-size;
+	}
+}
+
+.input-item{
+	margin:$l-size;
+	@media(max-width: $desktop-breakpoint){
+		margin: $s-size 0;
+		align-items: center;
+
+	}
+}	
+
+.text-input{
+	font-size: 2.5rem;
+	border: 1px solid #cacccd;
+	font-weight: 300;
+	height: 35px;
+	width: 90%;
+	padding: $s-size;
+	margin-left: $l-size;
+}
+
+.select{
+	@extend .text-input;
+	padding: $s-size;
+}
+
+.text-area{
+	height: 70px;
+}
+
+.form{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}

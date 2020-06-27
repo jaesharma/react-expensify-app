@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
+import { Provider } from 'react-redux';
+import AppRouter,{history} from './router/AppRouter.js';
 import {addExpense} from './actions/expenses';
 import {removeExpense} from './actions/expenses';
 import {editExpense} from './actions/expenses';
 import {setTextFilter} from './actions/filters';
-import getVisibleExpenses from './selectors/expenses';
-import AppRouter,{history} from './router/AppRouter.js';
 import {startSetExpenses} from './actions/expenses';
 import {login,logout} from './actions/auth';
+import getVisibleExpenses from './selectors/expenses';
+import Loader from './components/Loader';
 import './styles/styles.scss';
 import 'normalize.css/normalize.css';
 import {firebase} from './firebase/firebase';
@@ -30,7 +31,7 @@ const renderApp=()=>{
 	}
 };
 
-ReactDOM.render(<p>loading...</p>,document.getElementById('app'));
+ReactDOM.render(<Loader/>,document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user)=>{
 	if(user){
